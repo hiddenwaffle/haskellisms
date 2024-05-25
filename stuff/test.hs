@@ -1,5 +1,12 @@
 module Mult1 where
 --
+hello :: String
+hello = "hello"
+
+world :: String
+world = "world"
 
 main :: IO()
-main = putStrLn "hello world!"
+main = do
+  putStrLn myGreeting
+  where myGreeting = concat [hello, " ", world]

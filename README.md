@@ -146,9 +146,27 @@ Printing from a file requires some setup.
 
 ```haskell
 main :: IO()
-main = putStrLn "hello world!"
+main = do
+  putStrLn "hello world"
+  putStrLn "hello there"
 ```
 
-* `main` is a series of instructions to execute (not a function itself).
-* `IO()` is a special type that wraps the output of the module so that it can produce a side-effect.
+* `main` is a series of instructions to execute (not a function itself)
+* `IO()` is a special type that wraps the output of the module so that it can produce a side-effect
+  * When using the REPL, GHCi implies this by default
+* `do` allows for then sequencing of actions that presumably produce side-effects
 
+String concatenation
+
+```haskell
+hello :: String
+hello = "hello"
+
+world :: [String]
+world = "world"
+
+main :: IO()
+main = do
+  putStrLn myGreeting
+  where myGreeting = concat [hello, " ", world]
+```
