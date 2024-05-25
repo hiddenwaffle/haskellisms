@@ -97,8 +97,9 @@ y x
 -- 4
 ```
 
-* `let`...`in` is an _expression_
-* `where` is a _declaration_ (i.e., bound to a surrounding construct)
+* Local bindings
+  * `let`...`in` is an _expression_
+  * `where` is a _declaration_ (i.e., bound to a surrounding construct)
 
 ```haskell
 -- with let
