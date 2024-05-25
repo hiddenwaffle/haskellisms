@@ -2,7 +2,9 @@
 
 Notes from [Haskell Programming from first principles](https://haskellbook.com/)
 
-## Chapter 2.1 Hello, Haskell
+**Table of Contents**: Click on the hamburger menu in the upper-right corner of the GitHub display of this file.
+
+## Chapter 2 Basic expressions and functions
 
 Start the REPL
 
@@ -107,3 +109,6 @@ printInc n = let plusTwo = n + 2
 printInc n = print plusTwo
   where plusTwo = n + 2
 ```
+
+## Chapter 3 Simple operations with text
+
