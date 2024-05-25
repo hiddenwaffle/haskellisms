@@ -162,11 +162,13 @@ String concatenation
 hello :: String
 hello = "hello"
 
-world :: [String]
+world :: String
 world = "world"
 
 main :: IO()
 main = do
-  putStrLn myGreeting
-  where myGreeting = concat [hello, " ", world]
+  putStrLn myGreeting1
+  putStrLn myGreeting2
+    where myGreeting1 = concat [hello, " ", world, " 1"]
+          myGreeting2 = hello ++ " " ++ world ++ " 2"
 ```
