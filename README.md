@@ -14,7 +14,7 @@ stack ghci
 
 Load a file
 
-```
+```haskell
 :load test.hs
 
 -- Reload the same file
@@ -34,7 +34,7 @@ div 10 4
 
 Get info about a function
 
-```
+```haskell
 :info div
 :info (+)
 ```
@@ -111,4 +111,44 @@ printInc n = print plusTwo
 ```
 
 ## Chapter 3 Simple operations with text
+
+```haskell
+:type 'a'
+-- 'a' :: Char
+--     ^^---- :: means "has the type", i.e., the type signature
+:info Char
+-- type Char :: *
+-- data Char = GHC.Types.C# GHC.Prim.Char#
+-- ...
+
+:type "Hello!"
+-- "Hello!" :: String
+:info String
+-- type String :: *
+-- type String = [Char]
+-- ...
+```
+
+Printing the the screen
+
+```haskell
+print "hi"
+-- "hi"
+print 'h'
+-- 'h'
+putStrLn "hi"
+-- hi
+putStr "hi"
+-- hi (without a newline)
+```
+
+Printing from a file requires some setup.
+
+```haskell
+main :: IO()
+main = putStrLn "hello world!"
+```
+
+* `main` is a series of instructions to execute (not a function itself).
+* `IO()` is a special type that wraps the output of the module so that it can produce a side-effect.
 
